@@ -1,7 +1,6 @@
-import React from 'react'
-
+import React from 'react';
 export default function Home(props) {
-    
+    console.log(props);
     const product = [
       {
         id: 1,
@@ -72,8 +71,6 @@ export default function Home(props) {
           "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
       },
     ];
-    
-   
     return (
       <div className="col-md-12 text-center">
         <div className="row">
@@ -89,11 +86,16 @@ export default function Home(props) {
                     width="200px"
                   ></img>
                   <h5 className="card-title">{product.title}</h5>
-
                   <p className="card-text">Rs : {product.price}</p>
                   <br></br>
-                  
-                  <button className="btn btn-primary" onClick={(e)=>{props.addToCartHandler(product.id);}}>Add to Cart</button>
+                  <button
+                    className="btn btn-primary"
+                    onClick={(e) => {
+                      props.addToCartHandler(product.id);
+                    }}
+                  >
+                    Add to Cart
+                  </button>
                 </div>
               </div>
             </div>

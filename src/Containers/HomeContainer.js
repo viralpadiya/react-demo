@@ -10,6 +10,7 @@ const mapDispatchToProps = (dispatch) => ({
     addToCartHandler:function(data) {
 
         dispatch(addToCart(data));
-    }
+    },
+    
 }); 
 export default connect(mapStateToProps,mapDispatchToProps)(Home);
